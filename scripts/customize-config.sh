@@ -1,11 +1,13 @@
 #!/bin/bash
 
+############# Modify default parameters here #################
 WORKDIR=/workdir
 HOSTNAME=MT1300
 IPADDRESS=192.168.8.1
 SSID=MT1300
 ENCRYPTION=psk2+ccmp
 KEY=password
+###############################################################
 
 cd "$WORKDIR/openwrt"
 
