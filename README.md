@@ -21,6 +21,7 @@ Lienol源码
 
 
 最佳建议:
+
 使用GL官方的固件，然后搭配这里的ipk插件包。
 此编译的固件 OpenWrt_firmware_gl-mt1300_yyyymmddhhmm 中已经包含插件包 mt1300-酸酸乳片.tar.gz。
 ssh上传mt1300-酸酸乳片.tar.gz到GL官方固件下，然后执行install-酸酸乳片.sh即可。
