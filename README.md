@@ -17,6 +17,7 @@ WIFI 密码：password
 修改对应 .config.gl 文件触发自动编译
 
 2021-01-21 新增从Lean源码编译的固件，修改 .config.lean 触发编译
+
 2021-03-01 新增从Lienol源码编译的固件，修改 .config.lienol 触发编译
 
 已知问题：
