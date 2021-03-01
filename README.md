@@ -2,6 +2,13 @@
 
 感谢Lienol和Lean两位大神所提供的插件。
 
+默认设置：
+
+主机名：MT1300
+IP 地址：192.168.8.1
+WIFI SSID：MT1300
+WIFI 密码：password
+
 使用 GL-iNet 官方19.07.2源码，添加了Lienol和Lean两位大神的部分插件。
 修改对应 .config.gl 文件触发自动编译
 
