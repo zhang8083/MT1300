@@ -30,14 +30,17 @@ Lean源码
 1. 有两路WIFI，但是需要两路相同频段和频道，否则不工作
 
 Lienol源码
-1. Travelmate不正常，已去除
+1. 有两路WIFI，但是需要两路相同频段和频道，否则不工作
 
 
 最佳建议:
+
+使用Lienol版本，建议将wlan-0禁用，只使用wlan-1。如果需要设置两路WIFI，建议设置相同频道。
+
+或者：
 
 使用GL官方的固件，然后搭配这里的ipk插件包。
 此编译的固件 OpenWrt_firmware_gl-mt1300_yyyymmddhhmm 中已经包含插件包 mt1300-酸酸乳片.tar.gz。
 ssh上传mt1300-酸酸乳片.tar.gz到GL官方固件下，然后执行install-酸酸乳片.sh即可。
 
-或者使用Lienol版本，WIFI设置建议2.4G和5G使用相同SSID，相同频道。
 
