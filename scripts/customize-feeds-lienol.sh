@@ -6,7 +6,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-
 
 # Add openclash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-ARCH=mipsle-softfloat
+ARCH=mipsle-hardfloat
 cd /workdir/openwrt
 mkdir -p files/etc/openclash/core
 
