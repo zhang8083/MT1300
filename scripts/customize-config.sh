@@ -3,11 +3,12 @@
 ############# Modify default parameters here #################
 WORKDIR=/workdir
 HOSTNAME=MT1300
-#IPADDRESS=192.168.8.1
+IPADDRESS=192.168.8.1
 SSID=MT1300
 ENCRYPTION=psk2+ccmp
 KEY=password
-DEFAULT_SETTINGS=/workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+LEAN_SETTINGS=/workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
+LIENOL_SETTINGS=/workdir/openwrt/package/default-settings/files/zzz-default-settings
 ###############################################################
 
 cd "$WORKDIR/openwrt"
@@ -17,13 +18,23 @@ sed -i "s/hostname='OpenWrt'/hostname='$HOSTNAME'/g" package/base-files/files/bi
 
 # Modify default IP, can not use this sed command to modify config_generate to change the default network ipaddress in 21.02.
 #sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
-#if [ -f "$DEFAULT_SETTINGS" ]
-#then
-#    sed -i -e '/exit 0/d' $DEFAULT_SETTINGS
-#    echo 'uci set network.lan.ipaddr=192.168.8.1' >> $DEFAULT_SETTINGS
-#    echo 'uci commit network' >> $DEFAULT_SETTINGS
-#    echo 'exit 0' >> $DEFAULT_SETTINGS
-#fi
+if [ -f "$LIENOL_SETTINGS" ]
+then
+    sed -i -e '/exit 0/d' $LIENOL_SETTINGS
+    echo "uci set network.lan.ipaddr=$IPADDRESS" >> $LIENOL_SETTINGS
+    echo 'uci commit network' >> $LIENOL_SETTINGS
+    echo 'exit 0' >> $LIENOL_SETTINGS
+else
+    if [ -f "$LEAN_SETTINGS" ]
+    then
+        sed -i -e '/exit 0/d' $LEAN_SETTINGS
+        echo "uci set network.lan.ipaddr=$IPADDRESS" >> $LEAN_SETTINGS
+        echo 'uci commit network' >> $LEAN_SETTINGS
+        echo 'exit 0' >> $LEAN_SETTINGS
+    else 
+        sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
+    fi
+fi
 
 # Modify Timezone
 sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
