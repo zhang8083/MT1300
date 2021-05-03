@@ -6,14 +6,14 @@
 
 主机名：MT1300
 
-IP 地址：192.168.8.1
+IP 地址：192.168.1.1
 
 WIFI SSID：MT1300
 
 WIFI 密码：password
 
 
-使用 GL-iNet 官方19.07.2源码，添加了Lienol和Lean两位大神的部分插件。
+使用 GL-iNet 官方19.07.7源码，添加了Lienol和Lean两位大神的部分插件。
 修改对应 .config.gl 文件触发自动编译
 
 2021-01-21 新增从Lean源码编译的固件，修改 .config.lean 触发编译
@@ -37,11 +37,4 @@ Lienol源码
 
 使用Lienol版本，建议将wlan-0禁用，只使用wlan-1。如果需要设置两路WIFI，建议设置相同频道。
 通过一段时间使用，目前比较稳定，建议使用OpenClash。
-
-或者：
-
-使用GL官方的固件，然后搭配这里的ipk插件包。
-此编译的固件 OpenWrt_firmware_gl-mt1300_yyyymmddhhmm 中已经包含插件包 mt1300-酸酸乳片.tar.gz。
-ssh上传mt1300-酸酸乳片.tar.gz到GL官方固件下，然后执行install-酸酸乳片.sh即可。
-
 
