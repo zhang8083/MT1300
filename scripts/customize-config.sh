@@ -17,7 +17,7 @@ sed -i "s/hostname='OpenWrt'/hostname='$HOSTNAME'/g" package/base-files/files/bi
 
 # Modify default IP
 #sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
-if [ -f "DEFAULT_SETTINGS" ]
+if [ -f "$DEFAULT_SETTINGS" ]
 then
     sed -i -e '/exit 0/d' $DEFAULT_SETTINGS
     echo 'uci set network.lan.ipaddr=192.168.8.1' >> $DEFAULT_SETTINGS
