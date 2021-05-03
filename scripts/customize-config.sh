@@ -7,6 +7,7 @@ IPADDRESS=192.168.8.1
 SSID=MT1300
 ENCRYPTION=psk2+ccmp
 KEY=password
+DEFAULT_SETTINGS=/workdir/openwrt/package/lean/default-settings/files/zzz-default-settings
 ###############################################################
 
 cd "$WORKDIR/openwrt"
@@ -16,6 +17,13 @@ sed -i "s/hostname='OpenWrt'/hostname='$HOSTNAME'/g" package/base-files/files/bi
 
 # Modify default IP
 #sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
+if [ -f "DEFAULT_SETTINGS" ]
+then
+    sed -i -e '/exit 0/d' $DEFAULT_SETTINGS
+    echo 'uci set network.lan.ipaddr=192.168.8.1' >> $DEFAULT_SETTINGS
+    echo 'uci commit network' >> $DEFAULT_SETTINGS
+    echo 'exit 0' >> $DEFAULT_SETTINGS
+fi
 
 # Modify Timezone
 sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
