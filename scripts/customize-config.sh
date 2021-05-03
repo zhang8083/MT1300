@@ -3,7 +3,7 @@
 ############# Modify default parameters here #################
 WORKDIR=/workdir
 HOSTNAME=MT1300
-IPADDRESS=192.168.8.1
+#IPADDRESS=192.168.8.1
 SSID=MT1300
 ENCRYPTION=psk2+ccmp
 KEY=password
@@ -15,15 +15,15 @@ cd "$WORKDIR/openwrt"
 # Modify default Hostname
 sed -i "s/hostname='OpenWrt'/hostname='$HOSTNAME'/g" package/base-files/files/bin/config_generate
 
-# Modify default IP
+# Modify default IP, can not use this sed command to modify config_generate to change the default network ipaddress in 21.02.
 #sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
-if [ -f "$DEFAULT_SETTINGS" ]
-then
-    sed -i -e '/exit 0/d' $DEFAULT_SETTINGS
-    echo 'uci set network.lan.ipaddr=192.168.8.1' >> $DEFAULT_SETTINGS
-    echo 'uci commit network' >> $DEFAULT_SETTINGS
-    echo 'exit 0' >> $DEFAULT_SETTINGS
-fi
+#if [ -f "$DEFAULT_SETTINGS" ]
+#then
+#    sed -i -e '/exit 0/d' $DEFAULT_SETTINGS
+#    echo 'uci set network.lan.ipaddr=192.168.8.1' >> $DEFAULT_SETTINGS
+#    echo 'uci commit network' >> $DEFAULT_SETTINGS
+#    echo 'exit 0' >> $DEFAULT_SETTINGS
+#fi
 
 # Modify Timezone
 sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
