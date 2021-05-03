@@ -15,7 +15,7 @@ cd "$WORKDIR/openwrt"
 sed -i "s/hostname='OpenWrt'/hostname='$HOSTNAME'/g" package/base-files/files/bin/config_generate
 
 # Modify default IP
-sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/$IPADDRESS/g' package/base-files/files/bin/config_generate
 
 # Modify Timezone
 sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
