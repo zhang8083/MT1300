@@ -1,6 +1,6 @@
-# passwall + openclash
-#
-# Automatically generated file; DO NOT EDIT.
+# openclash + passwall + samba
+# 
+# Automatically generated file; DO NOT EDIT.    
 # OpenWrt Configuration
 #
 CONFIG_MODULES=y
