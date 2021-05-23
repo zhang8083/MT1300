@@ -44,5 +44,5 @@ Lienol源码
 
 2021-05-23更新：
 
-官方2021-04-02版本固件已经提供了OpenClash的支持包，建议采用官方固件 + Luci + OpenClash。
+官方2021-04-02版本固件已经提供了OpenClash的支持包，建议采用官方固件 + Luci + OpenClash。使用 install_openclash_for_official.sh 脚本安装。
 
