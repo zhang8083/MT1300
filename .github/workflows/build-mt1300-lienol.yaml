@@ -36,7 +36,7 @@ env:
   CUSTOM_FEEDS: scripts/customize-feeds-lienol.sh
   CUSTOM_CONFIG: scripts/customize-config.sh
   #SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   TZ: Asia/Shanghai
