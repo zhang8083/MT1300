@@ -13,13 +13,13 @@
 
 #### 默认设置：
 
-**主机名：**MT1300
+主机名：MT1300
 
-**IP 地址：**192.168.8.1 
+IP 地址：192.168.8.1 
 
-**WIFI SSID：**MT1300
+WIFI SSID：MT1300
 
-**WIFI 密码：**password
+WIFI 密码：password
 
 
 
