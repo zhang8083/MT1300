@@ -34,7 +34,7 @@ opkg install ./shadowsocksr-libev-ssr-redir_*.ipk
 opkg install ./simple-obfs*.ipk
 opkg install ./tcping_*.ipk
 opkg install ./trojan*.ipk
-opkg install ./xray-core_*.ip
+opkg install ./xray-core_*.ipk
 opkg install ./luci-app-passwall_*.ipk
 opkg install ./luci-i18n-passwall-zh-cn_*.ipk
 EOF
@@ -45,23 +45,17 @@ echo "Creating installation script for ssr plus"
 cat << EOF > ./plugin/install-ssrp.sh
 opkg update
 opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd luci-i18n-ttyd-zh-cn luci-compat luci-lib-ipkg wget htop
-opkg install ./shadowsocksr-libev-alt_*.ipk
 opkg install ./pdnsd-alt_*.ipk
 opkg install ./microsocks_*.ipk
 opkg install ./dns2socks_*.ipk
 opkg install ./shadowsocksr-libev-ssr-local_*.ipk
 opkg install ./simple-obfs*.ipk
 opkg install ./tcping_*.ipk
-#opkg install ./v2ray-plugin_*.ipk
-#opkg install ./xray_*.ipk
-#opkg install ./trojan*.ipk
 opkg install ./ipt2socks_*.ipk
-#opkg install ./redsocks2_*.ipk
 opkg install ./xray-core_*.ipk
 opkg install ./shadowsocks-libev-ss-local_*.ipk
 opkg install ./shadowsocks-libev-ss-redir_*.ipk
-opkg install ./shadowsocksr-libev-ss-redir_*.ipk
-opkg install ./shadowsocksr-libev-ss-check_*.ipk
+opkg install ./shadowsocksr-libev-ssr-check_*.ipk
 opkg install ./luci-app-ssr-plus_*.ipk
 opkg install ./luci-i18n-ssr-plus-zh-cn_*.ipk
 EOF
@@ -72,7 +66,6 @@ echo "Creating installation script for openclash"
 cat << EOF > ./plugin/install-openclash.sh
 opkg update
 opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd luci-i18n-ttyd-zh-cn luci-compat luci-lib-ipkg wget htop
-opkg install ./redsocks2_*.ipk
 opkg install ./luci-app-openclash_*.ipk
 mkdir -p /etc/openclash/core
 cd /etc/openclash/core
