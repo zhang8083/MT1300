@@ -1,4 +1,4 @@
-# 2018-08-18 openclash, passwall, ssr plus
+# 2018-08-18 passwall, ssr plus
 # Automatically generated file; DO NOT EDIT.
 # OpenWrt Configuration
 #
@@ -4806,7 +4806,7 @@ CONFIG_PACKAGE_luci-app-netdata=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
-CONFIG_PACKAGE_luci-app-openclash=y
+# CONFIG_PACKAGE_luci-app-openclash is not set
 # CONFIG_PACKAGE_luci-app-openvpn is not set
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
 # CONFIG_PACKAGE_luci-app-p910nd is not set
