@@ -8,7 +8,7 @@
 
 1. 2021-01-21 新增从Lean源码编译的固件，修改 .config.lean 触发编译
 2. 2021-03-01 新增从Lienol源码编译的固件，修改 .config.lienol 触发编译
-
+3. 2021-08-20 新增从Immortal源码编译的固件，修改 .config.immortal 触发编译
 
 
 #### 默认设置：
