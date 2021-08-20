@@ -57,6 +57,10 @@ WIFI 密码：password
 Lienol大侠从代码库移除了20.02的源码，造成Lienol版本无法成功编译。19.07代码里没有MT1300这个Target，故暂时无法编译此版本。由于近期工作太忙，也没有时间去调试，暂时搁置了。
 
 
+### 基于Immortal源码编译：
+
+使用21.02分支，主要插件 adbyby，openclash，passwall, ssr plus，ttyd, zerotier
+
 
 ### 最佳使用建议:
 
