@@ -59,7 +59,7 @@ Lienol大侠从代码库移除了20.02的源码，造成Lienol版本无法成功
 
 ### 基于Immortal源码编译：
 
-使用21.02分支，主要插件 adbyby，openclash，passwall, ssr plus，ttyd, zerotier
+使用21.02分支，主要插件 adbyby，openclash，passwall, ssr plus，ttyd, zerotier，没有samba
 
 ##### 2021-08-20备注：
 
