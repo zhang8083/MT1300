@@ -61,6 +61,9 @@ Lienol大侠从代码库移除了20.02的源码，造成Lienol版本无法成功
 
 使用21.02分支，主要插件 adbyby，openclash，passwall, ssr plus，ttyd, zerotier
 
+##### 2021-08-20备注：
+
+由于Lienol大侠从代码库移除了20.02的源码，尝试使用Immortal的源码21.02分支进行编译。
 
 ### 最佳使用建议:
 
