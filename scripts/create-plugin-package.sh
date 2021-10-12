@@ -2,7 +2,7 @@ cd openwrt/bin/targets/*/*
 mkdir plugin
 
 # plugin list in ../../../packages/mipsel_24kc
-pkglist="base/shadowsocksr-libev-*.ipk base/pdnsd-alt_*.ipk base/chinadns-ng_*.ipk base/microsocks_*.ipk base/dns2socks_*.ipk base/simple-obfs*.ipk base/tcping_*.ipk base/v2ray-plugin_*.ipk base/xray_*.ipk base/trojan*.ipk base/ipt2socks_*.ipk base/redsocks2_*.ipk base/luci-*-passwall*.ipk base/luci-*-ssr-plus*.ipk luci/luci-compat_*.ipk base/xray-core_*.ipk gli_pub/shadowsocks-libev-ss-*.ipk base/shadowsocksr-libev-ssr-*.ipk base/luci-app-openclash*.ipk"
+pkglist="base/adbyby_*.ipk base/luci-app-adbyby-plus_*.ipk base/shadowsocksr-libev-*.ipk base/pdnsd-alt_*.ipk base/chinadns-ng_*.ipk base/microsocks_*.ipk base/dns2socks_*.ipk base/simple-obfs*.ipk base/tcping_*.ipk base/v2ray-plugin_*.ipk base/xray_*.ipk base/trojan*.ipk base/ipt2socks_*.ipk base/redsocks2_*.ipk base/luci-*-passwall*.ipk base/luci-*-ssr-plus*.ipk luci/luci-compat_*.ipk base/xray-core_*.ipk gli_pub/shadowsocks-libev-ss-*.ipk base/shadowsocksr-libev-ssr-*.ipk base/luci-app-openclash*.ipk"
 
 for pkg in $pkglist
 do
@@ -76,6 +76,17 @@ chmod +x clash*
 EOF
 
 chmod +x ./plugin/install-openclash.sh
+
+
+echo "Creating installation script for adbyby"
+cat << EOF > ./plugin/install-adbyby.sh
+opkg update
+opkg install luci luci-i18n-base-zh-cn ttyd luci-app-ttyd luci-i18n-ttyd-zh-cn luci-compat luci-lib-ipkg wget htop
+opkg install ./adbyby_*.ipk
+opkg install ./luci-app-adbyby-plus_*.ipk
+EOF
+
+chmod +x ./plugin/install-adbyby.sh
 
 
 tar czvf mt1300-plugin.tar.gz ./plugin
