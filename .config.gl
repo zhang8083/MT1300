@@ -1,4 +1,4 @@
-# 2021-10-22 back to 2021-08-09 passwall, ssr plus, openclash, no samba
+# 2021-10-25 passwall, ssr plus, no samba, and removed openclash
 # Automatically generated file; DO NOT EDIT.
 # OpenWrt Configuration
 #
@@ -4872,7 +4872,7 @@ CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-olsr is not set
 # CONFIG_PACKAGE_luci-app-olsr-services is not set
 # CONFIG_PACKAGE_luci-app-olsr-viz is not set
-CONFIG_PACKAGE_luci-app-openclash=y
+# CONFIG_PACKAGE_luci-app-openclash is not set
 # CONFIG_PACKAGE_luci-app-openvpn is not set
 CONFIG_PACKAGE_luci-app-opkg=y
 # CONFIG_PACKAGE_luci-app-p910nd is not set
