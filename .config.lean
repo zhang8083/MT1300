@@ -1,7 +1,7 @@
 # 2021-10-10 ssr plus, passwall
 # Automatically generated file; DO NOT EDIT.
 # OpenWrt Configuration
-#
+#   zhangh 20211211
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_sunxi is not set
